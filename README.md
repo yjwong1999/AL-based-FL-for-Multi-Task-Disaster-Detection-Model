@@ -3,10 +3,10 @@ This repo provides some of the codes used in our research project doi-to-be-fill
 
 
 ## Overview of Our Project
-bullet or numbered points of our novelty
-show images of our mtl model
-show images of rsa
-show images of our decoupled FL 
+bullet or numbered points of our novelty </br>
+show images of our mtl model </br>
+show images of rsa </br>
+show images of our decoupled FL </br>
 
 
 ## Overview of Federated Learning
