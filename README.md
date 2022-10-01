@@ -1,6 +1,14 @@
 # AL-based-FL-for-Multi-Task-Disaster-Detection-Model
 This repo provides some of the codes used in our research project doi-to-be-filled
 
+
+## Overview of Our Project
+bullet or numbered points of our novelty
+show images of our mtl model
+show images of rsa
+show images of our decoupled FL 
+
+
 ## Overview of Federated Learning
 
 Federated learning (FL) is an approach to Machine Learning (ML) or Deep Learning (DL), where a shared global model is trained across many participating clients that keep their training data locally. Some of the popular existing FL framework inclucdes (i) [Google's TensorFlow Federated (TFF)](https://www.tensorflow.org/federated/tutorials/tutorials_overview) and (ii) [Intel's Open Federated Learning (OpenFL)](https://github.com/intel/openfl). 
