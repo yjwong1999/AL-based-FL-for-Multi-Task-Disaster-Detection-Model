@@ -1,4 +1,4 @@
-# AL-based-FL-for-Multi-Task-Disaster-Detection-Model
+# Joint Disaster Classification and Victim Detection using Multi-Task Learning
 This repo provides some of the codes used in our research project doi-to-be-filled
 
 
