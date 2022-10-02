@@ -1,5 +1,8 @@
 # Joint Disaster Classification and Victim Detection using Multi-Task Learning
-This repo provides some of the codes used in our research project doi-to-be-filled
+This repo provides some of the codes used in my following research projects: </br>
+1. [Joint Disaster Classification and Victim Detection using Multi-Task Learning](https://ieeexplore.ieee.org/document/9666576)
+2. [A Journal](www.google.com) \* </br>
+\* Research Work No. 2 is an extension based on Research Work No. 1
 
 
 ## Overview of Our Project
