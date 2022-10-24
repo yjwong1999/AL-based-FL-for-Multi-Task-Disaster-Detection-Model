@@ -7,12 +7,20 @@ This repo provides some of the codes used in my following research projects: </b
 
 ## Overview of Our Project
 show images of our mtl model </br>
-show images of rsa </br>
 show images of our decoupled FL </br>
+
+### Representation Similarity Analysis
+Representation Similarity Analysis (RSA) is to measure the similarity of the feature maps extracted by two models. The paper suggested that "RSA could beused for deciding different branching out locations for different tasks, depending on their similarity with the representations at different depth of the shared root". Our work exploits RSA to pinpoint the optimal branching location (for the multi-task model).
+
+### Federated Learning
+Federated learning (FL) is an approach to Machine Learning (ML) or Deep Learning (DL), where a shared global model is trained across many participating clients that keep their training data locally. Some of the popular existing FL framework inclucdes (i) [Google's TensorFlow Federated (TFF)](https://www.tensorflow.org/federated/tutorials/tutorials_overview) and (ii) [Intel's Open Federated Learning (OpenFL)](https://github.com/intel/openfl). 
+
+### Active Learning
+Active Learning is a special case of semi-supervised machine learning. Citing a quote from [Datacamp](https://www.datacamp.com/tutorial/active-learning), "The main hypothesis in active learning is that if a learning algorithm can choose the data it wants to learn from, it can perform better than traditional methods with substantially less data for training."
 
 
 ## Novelty
-1. Existing studies focus on solving single-task issue of disaster classification [13,16,27-29] and victim detection separately. In contrast, we introduce a MTL model by attaching a disaster classification head model to the backbone of a victim detection model. 
+1. Existing studies focus on solving single-task issue of disaster classification and victim detection separately. In contrast, we introduce a MTL model by attaching a disaster classification head model to the backbone of a victim detection model. We employ an efficient mathematical analysis to pinpoint the optimal branching location and to prune the head model.
 2. The framework design decouples training of two tasks.
 3. Most AL methods advocate uncertainty sampling, which selects the most uncertain samples from the unlabeled data pool to label [22]. Such strategy is ill-suited for disaster dataset, where samples from different classes exhibit high similarity. To enable efficient AL-based FL, we introduce a simple heuristic by combining both uncertainty and diversity samplings. 
 4. The majority of the research tries to accelerate the inference process without detailing the degree of accuracy loss. In contrast, our measurement outputs are based on open-source and production-ready frameworks to ensure reusability, interoperability, and scalability.
@@ -24,21 +32,6 @@ For better readability, I separated the following codes from this repo, as they 
 2. [Representation Similarity Analysis](https://github.com/yjwong1999/Representation-Similarity-Analysis)
 3. [GradCAM for YOLOv3](https://github.com/yjwong1999/GradCAM-for-YOLOv3)
 
-
-## Overview of Federated Learning
-
-Federated learning (FL) is an approach to Machine Learning (ML) or Deep Learning (DL), where a shared global model is trained across many participating clients that keep their training data locally. Some of the popular existing FL framework inclucdes (i) [Google's TensorFlow Federated (TFF)](https://www.tensorflow.org/federated/tutorials/tutorials_overview) and (ii) [Intel's Open Federated Learning (OpenFL)](https://github.com/intel/openfl). 
-
-### Drawback(s) of TFF
-As of today (18/9/2022), TFF is not production-ready yet. According to [TFF FAQ](https://www.tensorflow.org/federated/faq): "The current release is intended for experimentation uses, such as expressing novel federated algorithms, or trying out federated learning with your own datasets, using the included simulation runtime."
-
-### Drawback(s) of OpenFL
-OpenFL is a production-ready Python 3-based FL framework. Users can use OpenFL for both real-time application and also simulations. Similar to TFF, it also allows users to experiment and develop their own novel FL algorithm. 
-
-
-## Overview of Active Learning
-
-Active Learning is a special case of semi-supervised machine learning. Citing a quote from [Datacamp](https://www.datacamp.com/tutorial/active-learning), "The main hypothesis in active learning is that if a learning algorithm can choose the data it wants to learn from, it can perform better than traditional methods with substantially less data for training."
 
 ## Tools
 TensorFlow 2.0 </br>
