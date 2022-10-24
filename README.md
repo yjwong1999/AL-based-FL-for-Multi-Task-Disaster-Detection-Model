@@ -10,6 +10,10 @@ show images of our mtl model </br>
 show images of rsa </br>
 show images of our decoupled FL </br>
 
+[MobileNetV2 for Disaster Classification](https://github.com/yjwong1999/MobileNetV2-for-Disaster-Classification)
+[Representation Similarity Analysis](https://github.com/yjwong1999/Representation-Similarity-Analysis)
+[GradCAM for YOLOv3](https://github.com/yjwong1999/GradCAM-for-YOLOv3)
+
 ## Novelty
 1. Existing studies focus on solving single-task issue of disaster classification [13,16,27-29] and victim detection separately. In contrast, we introduce a MTL model by attaching a disaster classification head model to the backbone of a victim detection model. 
 2. The framework design decouples training of two tasks.
