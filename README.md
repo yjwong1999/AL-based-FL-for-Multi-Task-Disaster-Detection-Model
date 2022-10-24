@@ -8,6 +8,8 @@ Feel free to check out our Research Work 2, which is OpenAccess and free to down
 
 ## Overview of Our Project
 ![image](https://user-images.githubusercontent.com/55955482/197429318-e3f33cc0-581e-4546-afd6-6c774643d999.png)
+![GA](https://user-images.githubusercontent.com/55955482/197528473-85497daf-f2d4-4c11-b5a5-8bbfff70a9c6.jpg)
+
 We design a Multi-Task model for joint disaster classification and victim detection using Representation Similarity Analysis (RSA). We train the model using both the conventional Centralized Learning (CL) and Federated Learning (FL) methods. We also tried Active Learning (AL) to see how it could help in reducing the labeling workload for disaster dataset. Finally, we use OpenVINO for model optimization and inference optimization.
 
 ### Representation Similarity Analysis
