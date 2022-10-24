@@ -38,5 +38,10 @@ For better readability, I separated the following codes from this repo, as they 
 TensorFlow 2.0 </br>
 Open Federated Learning (OpenFL) </br>
 
+
 ## References
 [YOLOv3 for TF 2.0](https://github.com/zzh8829/yolov3-tf2)
+
+
+## Acknowledgement
+This work is the output of the ASEAN IVO (http://www.nict.go.jp/en/asean_ivo/index.html) project titled “Context-Aware Disaster Mitigation using Mobile Edge Computing and Wireless Mesh Network” and financially supported by NICT (http://www.nict.go.jp/en/index.html). 
