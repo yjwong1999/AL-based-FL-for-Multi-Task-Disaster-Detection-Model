@@ -4,6 +4,7 @@ This repo provides some of the codes used in my following research projects: </b
 2. [An Optimized Multi-Task Learning Model for Disaster Classification and Victim Detection in Federated Learning Environments](www.google.com) \* </br>
 \* Research Work No. 2 is an extension based on Research Work No. 1
 
+Feel free to check out our Research Work 2, which is OpenAccess and free to download :3
 
 ## Overview of Our Project
 ![image](https://user-images.githubusercontent.com/55955482/197429318-e3f33cc0-581e-4546-afd6-6c774643d999.png)
