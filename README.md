@@ -37,3 +37,6 @@ For better readability, I separated the following codes from this repo, as they 
 ## Tools
 TensorFlow 2.0 </br>
 Open Federated Learning (OpenFL) </br>
+
+## References
+[YOLOv3 for TF 2.0](https://github.com/zzh8829/yolov3-tf2)
