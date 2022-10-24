@@ -6,7 +6,6 @@ This repo provides some of the codes used in my following research projects: </b
 
 
 ## Overview of Our Project
-bullet or numbered points of our novelty </br>
 show images of our mtl model </br>
 show images of rsa </br>
 show images of our decoupled FL </br>
