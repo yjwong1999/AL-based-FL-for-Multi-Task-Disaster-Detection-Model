@@ -36,6 +36,10 @@ As of today (18/9/2022), TFF is not production-ready yet. According to [TFF FAQ]
 OpenFL is a production-ready Python 3-based FL framework. Users can use OpenFL for both real-time application and also simulations. Similar to TFF, it also allows users to experiment and develop their own novel FL algorithm. 
 
 
+## Overview of Active Learning
+
+Active Learning is a special case of semi-supervised machine learning. Citing a quote from [Datacamp](https://www.datacamp.com/tutorial/active-learning), "The main hypothesis in active learning is that if a learning algorithm can choose the data it wants to learn from, it can perform better than traditional methods with substantially less data for training."
+
 ## Tools
 TensorFlow 2.0 </br>
 Open Federated Learning (OpenFL) </br>
