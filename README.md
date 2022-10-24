@@ -6,8 +6,8 @@ This repo provides some of the codes used in my following research projects: </b
 
 
 ## Overview of Our Project
-show images of our mtl model </br>
-show images of our decoupled FL </br>
+![image](https://user-images.githubusercontent.com/55955482/197429318-e3f33cc0-581e-4546-afd6-6c774643d999.png)
+We design a Multi-Task model for joint disaster classification and victim detection using Representation Similarity Analysis (RSA). We train the model using both the conventional Centralized Learning (CL) and Federated Learning (FL) methods. We also tried Active Learning (AL) to see how it could help in reducing the labeling workload for disaster dataset. Finally, we use OpenVINO for model optimization and inference optimization.
 
 ### Representation Similarity Analysis
 Representation Similarity Analysis (RSA) is to measure the similarity of the feature maps extracted by two models. The paper suggested that "RSA could beused for deciding different branching out locations for different tasks, depending on their similarity with the representations at different depth of the shared root". Our work exploits RSA to pinpoint the optimal branching location (for the multi-task model).
@@ -16,7 +16,7 @@ Representation Similarity Analysis (RSA) is to measure the similarity of the fea
 Federated learning (FL) is an approach to Machine Learning (ML) or Deep Learning (DL), where a shared global model is trained across many participating clients that keep their training data locally. Some of the popular existing FL framework inclucdes (i) [Google's TensorFlow Federated (TFF)](https://www.tensorflow.org/federated/tutorials/tutorials_overview) and (ii) [Intel's Open Federated Learning (OpenFL)](https://github.com/intel/openfl). 
 
 ### Active Learning
-Active Learning is a special case of semi-supervised machine learning. Citing a quote from [Datacamp](https://www.datacamp.com/tutorial/active-learning), "The main hypothesis in active learning is that if a learning algorithm can choose the data it wants to learn from, it can perform better than traditional methods with substantially less data for training."
+Active Learning (AL) is a special case of semi-supervised machine learning. Citing a quote from [Datacamp](https://www.datacamp.com/tutorial/active-learning), "The main hypothesis in active learning is that if a learning algorithm can choose the data it wants to learn from, it can perform better than traditional methods with substantially less data for training."
 
 
 ## Novelty
