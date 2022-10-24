@@ -11,6 +11,12 @@ show images of our mtl model </br>
 show images of rsa </br>
 show images of our decoupled FL </br>
 
+## Novelty
+1. Existing studies focus on solving single-task issue of disaster classification [13,16,27-29] and victim detection separately. In contrast, we introduce a MTL model by attaching a disaster classification head model to the backbone of a victim detection model. 
+2. The framework design decouples training of two tasks.
+3. Most AL methods advocate uncertainty sampling, which selects the most uncertain samples from the unlabeled data pool to label [22]. Such strategy is ill-suited for disaster dataset, where samples from different classes exhibit high similarity. To enable efficient AL-based FL, we introduce a simple heuristic by combining both uncertainty and diversity samplings. 
+4. The majority of the research tries to accelerate the inference process without detailing the degree of accuracy loss. In contrast, our measurement outputs are based on open-source and production-ready frameworks to ensure reusability, interoperability, and scalability.
+
 
 ## Overview of Federated Learning
 
