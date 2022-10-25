@@ -1,0 +1,93 @@
+#######################################################
+# Install dependencies (for POT by API)
+# Main reference: https://docs.openvino.ai/latest/notebooks/111-detection-quantization-with-output.html
+# Dependencies: https://github.com/openvinotoolkit/openvino_notebooks/blob/main/requirements.txt
+#######################################################
+
+# create an env
+conda create --name openvino python=3.7
+conda activate openvino
+
+# install openvino 
+conda install openvino-ie4py-ubuntu18 -c intel
+python -c "from openvino.inference_engine import IECore"
+
+# install openvino-dev
+pip install openvino-dev==2021.4.2
+python -c "from openvino.runtime import Core"
+
+# INSTALL GPU GUIDE (from Working FL.txt)
+Part 1
+https://www.tensorflow.org/install/source#gpu
+- refer this link, see what version of CUDA you need for your tf
+- conda install -c anaconda cudatoolkit=11.3.1 (based on your need)*
+- pip install tensorflow-gpu==2.5
+* if what you need is not available, refer link below to see which one is closest
+	https://anaconda.org/anaconda/cudatoolkit/files
+
+Part 2
+https://medium.com/analytics-vidhya/solution-to-tensorflow-2-not-using-gpu-119fb3e04daa
+- conda search cudnn
+- see which cudnn and cuda is you need
+- conda install cudnn=8.2.1=cuda11.3_0
+- pip install tensorflow-gpu==2.5
+
+# install matplotlib
+pip install matplotlib
+
+# install torch
+pip install torch
+
+# isntall yaspin
+pip install yaspin
+
+# notebook utils from openvino
+https://github.com/openvinotoolkit/openvino_notebooks/blob/main/notebooks/utils/notebook_utils.py
+
+
+#######################################################
+# Reference to use OpenVINO 2021 for DL WORKBENCH
+#######################################################
+https://www.youtube.com/watch?v=20ROqz5j1y8
+https://www.youtube.com/watch?v=DaR49bs8qwk
+
+
+#######################################################
+# Reference to write the POT Code for Quantization
+#######################################################
+
+# Documentation for the API used for POT via openvino 2021
+https://docs.openvino.ai/2021.4/pot_compression_api_README.html#dataloader
+https://docs.openvino.ai/2021.1/pot_compression_api_README.html
+
+# Sample for POT for Object Detection
+https://docs.openvino.ai/latest/notebooks/111-detection-quantization-with-output.html
+
+# Sample for POT for Classification
+https://docs.openvino.ai/latest/notebooks/301-tensorflow-training-openvino-pot-with-output.html
+
+# Some observation I noticed
+1) class DetectionDataLoader(DataLoader)
+	-> __init__(self, ...):
+		how to do also can
+		just to make sure the things you need are passed in
+	-> __getitem__(self, index):
+		just take one argument (index)
+		must return (annotation/label, input image, [metadata])
+		annotation/label what pattern also can, as long as compatible with your metric
+		annotation/label only used if you pass the Metric (see (2))
+		input image is the thing you pass to the model (suggest to follow the sample)
+		metadata -> just ignore
+
+2) class MAPMetric(Metric)
+	-> __init__(self, ...)
+		no comment
+	-> updata(self, output, target)
+		output is the model output
+		target is the label (?)
+	* I din really go thru yet, but if not doing for accuracy aware quantiziation
+	  then dont really have to do this
+
+3) the rest of the code
+	-> quite straightforward
+	-> just look at the sample

@@ -1,0 +1,32 @@
+########################################################################
+# This guide is for int8 quantization for custom model that 
+# doesnt follow any convention model such as YOLO, SSD, classifcation
+#
+# For example, our MTL model is not vanilla YOLO and not vanilla classification
+# Our YOLO is also edited version, instead of original version
+# So we need to use this guide here
+########################################################################
+
+
+# if you are using conda environment (base also is considered an env)
+conda deactivate
+
+# go the the model optimizer directory (change according to your dir)
+cd /opt/intel/openvino_2021/deployment_tools/model_optimizer
+
+# float 32
+python3 mo_tf.py --output_dir /home/tham/Documents/openvino/model/victim --input_shape [1,416,416,3] --saved_model_dir /home/tham/Documents/fyp_yijie/split_model/victim_model --scale 255 --reverse_input_channels --data_type FP32
+
+# float 16
+python3 mo_tf.py --output_dir /home/tham/Documents/openvino/model/victim --input_shape [1,416,416,3] --saved_model_dir /home/tham/Documents/fyp_yijie/split_model/victim_model --scale 255 --reverse_input_channels --data_type FP16
+
+# activate the conda env with openvino and openvino-dev installed using the "POT by API.txt"
+conda activate openvino
+
+# go to where you download the mtl_quant.py
+cd Documents
+cd openvino
+
+# edit the mtl_quant.py according to the instruction/advice provided in "POT by API.txt"
+# then run mtl_quant.py
+python3 mtl_quant.py

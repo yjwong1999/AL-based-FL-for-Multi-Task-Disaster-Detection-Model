@@ -1,0 +1,66 @@
+# Install DL Workbench on Ubuntu
+Main reference: https://www.youtube.com/watch?v=JBDG2g5hsoM
+
+
+##########################################################
+# Close conda!
+##########################################################
+conda deactivate
+
+
+##########################################################
+# Install Docker on Ubuntu
+# Reference: https://docs.docker.com/engine/install/ubuntu/
+##########################################################
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+sudo apt-get update
+
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+sudo docker run hello-world
+
+
+##########################################################
+# Use docker without sudo
+# Reference: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+##########################################################
+sudo usermod -aG docker tham
+
+su - tham
+
+id -nG
+
+docker
+
+# if conda (base) environment is opened after these codes
+conda deactivate
+
+
+##########################################################
+# Intsall and Open docker for dl workbench
+# version: https://hub.docker.com/r/openvino/workbench/tags
+# reference: https://docs.openvino.ai/nightly/workbench_docs_Workbench_DG_Run_Locally.html
+		(Step 2, 3)
+##########################################################
+conda deactivate
+
+source /opt/intel/openvino_2021/bin/setupvars.sh
+
+docker pull openvino/workbench:2021.4 (based on your version)
+
+docker rm workbench # if you ady run it previously
+docker run -p 0.0.0.0:5665:5665 --name workbench -it openvino/workbench:2021.4 (based on your version)
