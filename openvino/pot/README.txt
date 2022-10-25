@@ -15,7 +15,7 @@ If you are not using this version, some of the dependencies will not work
 	  openvino-dev also
 
 
-2) POT by DL Workbench
+2) POT by DL Workbench.txt
 - Guide on how to use DL Workbench for OpenVINO 2021.4
 - Extra details:
 	- If Im not mistaken, the guide Dr Tham provided for me is not for OpenVINO 2021.4
