@@ -45,13 +45,14 @@ Open Federated Learning (OpenFL) </br>
 [YOLOv3 for TF 2.0](https://github.com/zzh8829/yolov3-tf2)
 
 
+## Acknowledgement
+This work is the output of the ASEAN IVO (http://www.nict.go.jp/en/asean_ivo/index.html) project titled “Context-Aware Disaster Mitigation using Mobile Edge Computing and Wireless Mesh Network” and financially supported by NICT (http://www.nict.go.jp/en/index.html). 
+
+
+
 <details>
 <summary>Star History</summary>
   
 [![Star History Chart](https://api.star-history.com/svg?repos=yjwong1999/AL-based-FL-for-Multi-Task-Disaster-Detection-Model&type=Date)](https://star-history.com/#yjwong1999/AL-based-FL-for-Multi-Task-Disaster-Detection-Model&Date)
 
 </details>
-
-
-## Acknowledgement
-This work is the output of the ASEAN IVO (http://www.nict.go.jp/en/asean_ivo/index.html) project titled “Context-Aware Disaster Mitigation using Mobile Edge Computing and Wireless Mesh Network” and financially supported by NICT (http://www.nict.go.jp/en/index.html). 
